@@ -14,6 +14,10 @@ importlib.reload(boll)
 importlib.reload(hw)
 importlib.reload(mmt)
 
+AAPL = pd.read_csv(r'/Users/minzy/Documents/GitHub/ubion/Python/0227/invest/data/AAPL.csv', index_col='Date')
+AMZN = pd.read_csv(r'/Users/minzy/Documents/GitHub/ubion/Python/0227/invest/data/AMZN.csv', index_col='Date')
+BND = pd.read_csv(r'/Users/minzy/Documents/GitHub/ubion/Python/0227/invest/data/BND.csv', index_col='Date')
+
 class Invest :
     def __init__ (self, _df, _col = 'Adj Close', _start = '2010-01-01', _end = datetime.now()) :
         if 'Date' in _df.columns :
